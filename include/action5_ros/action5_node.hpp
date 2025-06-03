@@ -20,6 +20,7 @@
 
 #include "action5_ros/visibility.hpp"
 #include "cv_bridge/cv_bridge.h"
+#include "opencv4/opencv2/core/mat.hpp"
 #include "opencv4/opencv2/videoio.hpp"
 #include "rclcpp/node.hpp"
 #include "sensor_msgs/msg/compressed_image.hpp"
