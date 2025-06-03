@@ -93,14 +93,11 @@ private:
 
     auto cv_bridge_image = cv_bridge::CvImage(header_msg, "bgr8", frame);
 
-    cv::imshow("camera", frame);
-
     auto image_compressed_msg = cv_bridge_image.toCompressedImageMsg();
     image_compressed_pub_->publish(*image_compressed_msg);
 
     auto image_msg = cv_bridge_image.toImageMsg();
     image_raw_pub_->publish(*image_msg);
-    cv::waitKey(1);
   }
 
   // capture
